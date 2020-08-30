@@ -1,63 +1,84 @@
 user_home: "{{ '~' | expanduser }}"
 
 dotfiles_repo: https://github.com/flandrade/dotfiles.git
-dotfiles_destination: "{{ user_home }}/dotfiles" 
+dotfiles_destination: "{{ user_home }}/dotfiles"
 dotfiles_version: HEAD
+dotfiles_vscode: "{{ user_home }}/Library/Application Support/Code/User/settings.json"
 
-homebrew_taps: 
-- homebrew/cask-fonts
-- homebrew/core
+homebrew_taps:
+  - homebrew/cask-fonts
+  - homebrew/core
 
 homebrew_packages:
-- asdf
-- bat
-- catimg
-- coreutils
-- curl
-- diff-so-fancy
-- exa
-- git
-- gpg
-- grep
-- htop
-- imagemagick
-- jpegoptim
-- ncdu
-- nmap
-- nvm
-- optipng
-- redis
-- speedtest_cli
-- stow
-- the_silver_searcher
-- tldr
-- tmate
-- tmux
-- trash
-- tree
-- unrar
-- vim
-- watch
-- wget
-- zsh
+  - asdf
+  - bat
+  - catimg
+  - coreutils
+  - curl
+  - diff-so-fancy
+  - exa
+  - git
+  - gpg
+  - grep
+  - htop
+  - imagemagick
+  - jpegoptim
+  - ncdu
+  - nmap
+  - nvm
+  - optipng
+  - redis
+  - speedtest_cli
+  - stow
+  - the_silver_searcher
+  - tldr
+  - tmate
+  - tmux
+  - trash
+  - tree
+  - unrar
+  - vim
+  - watch
+  - wget
+  - zsh
 
 homebrew_cask_packages:
-- 1password
-- arq
-- cyberduck
-- docker
-- evernote
-- firefox
-- font-fira-code
-- google-chrome
-- iterm2
-- kindle
-- maccy
-- postgres
-- postman
-- slack
-- spotify
-- the-unarchiver
-- virtualbox
-- visual-studio-code
-- zoomus
+  - 1password
+  - arq
+  - cyberduck
+  - docker
+  - evernote
+  - firefox
+  - font-fira-code
+  - google-chrome
+  - iterm2
+  - kindle
+  - maccy
+  - postgres
+  - postman
+  - slack
+  - spotify
+  - the-unarchiver
+  - virtualbox
+  - visual-studio-code
+  - zoomus
+
+vscode_extensions:
+  - CoenraadS.bracket-pair-colorizer-2
+  - EditorConfig.EditorConfig
+  - GrapeCity.gc-excelviewer
+  - HookyQR.beautify
+  - Zignd.html-css-class-completion
+  - dbaeumer.vscode-eslint
+  - dracula-theme.theme-dracula
+  - eamodio.gitlens
+  - esbenp.prettier-vscode
+  - mikestead.dotenv
+  - mkaufman.HTMLHint
+  - oderwat.indent-rainbow
+  - pranaygp.vscode-css-peek
+  - redhat.vscode-yaml
+  - streetsidesoftware.code-spell-checker
+  - vscode-icons-team.vscode-icons
+  - vscodevim.vim
+  - yzhang.markdown-all-in-one

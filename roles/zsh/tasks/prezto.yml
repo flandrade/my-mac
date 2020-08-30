@@ -6,6 +6,7 @@
     recursive: true
     accept_hostkey: "{{ prezto_repo_accept_host_key }}"
     version: "{{ prezto_repo_version }}"
+    force: true
 
 - name: Link all Prezto files
   file:

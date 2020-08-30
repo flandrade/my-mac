@@ -1,9 +1,9 @@
 ---
-- name: checks if extension is installed
+- name: checks if extension is installed - {{ item }}
   stat:
     path: "{{ user_home }}/.vscode/extensions/{{ item }}"
   register: vscode_extension
 
-- name: installs extension for Visual Studio Code
+- name: installs extension for Visual Studio Code - {{ item }}
   command: "'/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' --install-extension {{ item }}"
   when: not vscode_extension.stat.exists
