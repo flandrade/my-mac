@@ -1,0 +1,4 @@
+prezto_repo: https://github.com/brianhartsock/prezto.git
+prezto_repo_destination: ~/.zprezto
+prezto_repo_accept_host_key: false
+prezto_repo_version: HEAD

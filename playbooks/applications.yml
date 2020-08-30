@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  vars:
+    homebrew_installed_packages: "{{ homebrew_packages }}"
+    homebrew_cask_apps: "{{ homebrew_cask_packages }}"
+    homebrew_cask_accept_external_apps: true
+    homebrew_use_brewfile: false
+  roles:
+    - geerlingguy.homebrew

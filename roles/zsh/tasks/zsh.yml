@@ -1,0 +1,19 @@
+- name: Make sure zsh is installed
+  homebrew: name=zsh state=present
+
+- name: Add valid zsh to /etc/shells
+  lineinfile:
+    line: /usr/local/bin/zsh
+    dest: /etc/shells
+    state: present
+  register: zsh_enabled
+  become: yes
+  become_method: sudo
+
+- name: Set user shell to zsh
+  command: chsh -s /usr/local/bin/zsh
+  when: zsh_enabled.changed
+
+ - name: Set asdf in zsh
+  command: echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
+  when: zsh_enabled.changed 

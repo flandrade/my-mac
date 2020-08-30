@@ -1,0 +1,63 @@
+dotfiles_user_home: "{{ '~' | expanduser }}"
+
+git_name: Fernanda Andrade
+git_user: flandrade
+git_email: flandrade@users.noreply.github.com
+
+homebrew_taps: 
+- homebrew/cask-fonts
+- homebrew/core
+
+homebrew_packages:
+- asdf
+- bat
+- catimg
+- coreutils
+- curl
+- diff-so-fancy
+- exa
+- git
+- gpg
+- grep
+- htop
+- imagemagick
+- jpegoptim
+- ncdu
+- nmap
+- nvm
+- optipng
+- redis
+- speedtest_cli
+- stow
+- the_silver_searcher
+- tldr
+- tmate
+- tmux
+- trash
+- tree
+- unrar
+- vim
+- watch
+- wget
+- zsh
+
+homebrew_cask_packages:
+- 1password
+- arq
+- cyberduck
+- docker
+- evernote
+- firefox
+- font-fira-code
+- google-chrome
+- iterm2
+- kindle
+- maccy
+- postgres
+- postman
+- slack
+- spotify
+- the-unarchiver
+- virtualbox
+- visual-studio-code
+- zoomus

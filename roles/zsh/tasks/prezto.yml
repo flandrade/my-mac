@@ -1,0 +1,21 @@
+---
+- name: Install Prezto
+  git:
+    repo: "{{ prezto_repo }}"
+    dest: "{{ prezto_repo_destination }}"
+    recursive: true
+    accept_hostkey: "{{ prezto_repo_accept_host_key }}"
+    version: "{{ prezto_repo_version }}"
+
+- name: Link all Prezto files
+  file:
+    src: "{{ prezto_repo_destination }}/runcoms/{{ item }}"
+    dest: ~/.{{ item }}
+    state: link
+  with_items:
+    - zlogin
+    - zlogout
+    - zpreztorc
+    - zprofile
+    - zshenv
+    - zshrc
