@@ -1,0 +1,3 @@
+---
+- name: Run config script
+  script: setup.sh
