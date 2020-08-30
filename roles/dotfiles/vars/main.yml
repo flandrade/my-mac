@@ -1,6 +1,25 @@
 ---
 dotfiles_vscode: "{{ user_home }}/Library/Application Support/Code/User/settings.json"
 
+vscode_extensions:
+  - dbaeumer.vscode-eslint
+  - vscodevim.vim
+  - esbenp.prettier-vscode
+  - vscode-icons-team.vscode-icons
+  - eamodio.gitlens
+  - HookyQR.beautify
+  - redhat.vscode-yaml
+  - Zignd.html-css-class-completion
+  - pranaygp.vscode-css-peek
+  - yzhang.markdown-all-in-one
+  - CoenraadS.bracket-pair-colorizer-2
+  - mikestead.dotenv
+  - oderwat.indent-rainbow
+  - mkaufman.HTMLHint
+  - GrapeCity.gc-excelviewer
+  - EditorConfig.EditorConfig
+  - dracula-theme.theme-dracula
+
 dotfiles_apps:
   - git
   - zprezto
@@ -14,3 +33,4 @@ dotfiles_files:
   - tmux.conf
   - vimrc
   - zshrc
+  - p10k.zsh

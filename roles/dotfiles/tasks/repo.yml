@@ -1,0 +1,34 @@
+---
+- name: Make sure stow is installed
+  homebrew: name=stow state=present
+
+- name: Download dotfiles
+  git:
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ dotfiles_destination }}"
+    recursive: true
+    version: "{{ dotfiles_version }}"
+
+- name: Check if dotfiles already exists
+  stat: path="{{ user_home }}/.{{ item }}"
+  register: "dotfile_stat"
+  loop: "{{ dotfiles_files }}"
+
+- name: Backup dotfiles if exist
+  copy:
+    src: "{{ item.stat.path }}"
+    dest: "{{ item.stat.path }}.bak"
+    remote_src: yes
+  when: item.stat.exists
+  loop: "{{ dotfile_stat.results }}"
+
+- name: Remove old dotfiles if exist
+  file: path="{{ item.stat.path }}" state=absent
+  when: item.stat.exists
+  loop: "{{ dotfile_stat.results }}"
+
+- name: Link dotfiles
+  command: stow {{ item }}
+  args:
+    chdir: "{{ dotfiles_destination }}"
+  with_items: "{{ dotfiles_apps }}"
