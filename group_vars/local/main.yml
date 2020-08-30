@@ -1,8 +1,8 @@
-dotfiles_user_home: "{{ '~' | expanduser }}"
+user_home: "{{ '~' | expanduser }}"
 
-git_name: Fernanda Andrade
-git_user: flandrade
-git_email: flandrade@users.noreply.github.com
+dotfiles_repo: https://github.com/flandrade/dotfiles.git
+dotfiles_destination: "{{ user_home }}/dotfiles" 
+dotfiles_version: HEAD
 
 homebrew_taps: 
 - homebrew/cask-fonts

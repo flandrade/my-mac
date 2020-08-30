@@ -1,0 +1,16 @@
+---
+dotfiles_vscode: "{{ user_home }}/Library/Application Support/Code/User/settings.json"
+
+dotfiles_apps:
+  - git
+  - zprezto
+  - tmux
+  - vim
+  - zsh
+
+dotfiles_files:
+  - gitconfig
+  - zpreztorc
+  - tmux.conf
+  - vimrc
+  - zshrc

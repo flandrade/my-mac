@@ -2,15 +2,5 @@
 - name: Configure zsh
   import_tasks: zsh.yml
 
-- name: Check if zshrc already exists
-  stat: path="{{dotfiles_user_home}}/.zshrc"
-  register: zshrc_stat
-
-- name: Back up zshrc if it exists
-  command: cp ~/.zshrc ~/.zshrc.bak
-  args:
-    creates: "{{dotfiles_user_home}}/.zshrc.bak"
-  when: zshrc_stat.stat.exists
-
 - name: Install prezto
   import_tasks: prezto.yml

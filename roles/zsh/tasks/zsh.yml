@@ -13,7 +13,3 @@
 - name: Set user shell to zsh
   command: chsh -s /usr/local/bin/zsh
   when: zsh_enabled.changed
-
- - name: Set asdf in zsh
-  command: echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
-  when: zsh_enabled.changed 

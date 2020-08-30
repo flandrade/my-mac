@@ -1,0 +1,51 @@
+---
+- name: Make sure stow is installed
+  homebrew: name=stow state=present
+
+- name: Download dotfiles
+  git:
+    repo: "{{ dotfiles_repo }}"
+    dest: "{{ dotfiles_destination }}"
+    recursive: true
+    version: "{{ dotfiles_version }}"
+
+# - name: Check if dotfiles already exists
+#   stat: path="{{ user_home }}/.{{ item }}"
+#   register: "dotfile_stat"
+#   loop: "{{ dotfiles_files }}"
+
+# - name: Backup dotfiles if exist
+#   copy:
+#     src: "{{ item.stat.path }}"
+#     dest: "{{ item.stat.path }}.bak"
+#     remote_src: yes
+#   when: item.stat.exists
+#   loop: "{{ dotfile_stat.results }}"
+
+# - name: Remove old dotfiles if exist
+#   file: path="{{ item.stat.path }}" state=absent
+#   when: item.stat.exists
+#   loop: "{{ dotfile_stat.results }}"
+
+# - name: Link dotfiles
+#   command: stow {{ item }}
+#   args:
+#     chdir: "{{ dotfiles_destination }}"
+#   with_items: "{{ dotfiles_apps }}"
+
+- name: Check if vscode settings already exists
+  stat: path="{{ dotfiles_vscode }}"
+  register: vscode_stat
+
+- name: Backup dotfiles if exist
+  copy:
+    src: "{{ dotfiles_vscode }}"
+    dest: "{{ dotfiles_vscode }}.bak"
+    remote_src: yes
+  when: vscode_stat.stat.exists
+
+- name: Reeplace vscode settings
+  copy:
+    src: "{{ dotfiles_destination }}/vscode/settings.json"
+    dest: "{{ dotfiles_vscode }}"
+    remote_src: yes

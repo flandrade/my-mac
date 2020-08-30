@@ -1,3 +1,4 @@
 ---
-- import_playbook: playbooks/applications.yml
+# - import_playbook: playbooks/applications.yml
 # - import_playbook: playbooks/shell.yml
+- import_playbook: playbooks/dotfiles.yml
