@@ -27,6 +27,7 @@ homebrew_packages:
   - nmap
   - nvm
   - optipng
+  - postgres
   - redis
   - speedtest_cli
   - stow

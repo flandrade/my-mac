@@ -6,51 +6,51 @@
   align="right"
 />
 
-# My MacOS Setup with Ansible Playbooks
+# My MacOS Setup with Ansible
 
 [![Build Status](https://github.com/flandrade/my-mac/workflows/build/badge.svg)](https://github.com/flandrade/my-mac/actions)
 
-This repository contains a few Ansible playbooks to setup, configure, and maintain
-my Mac. This sets up a full local development environment with a single command.
-It takes most of the effort out of installing and configuring everything manually.
+This repository contains Ansible playbooks to setup, configure, and maintain
+my Mac. They sets up a full local development environment with a single command.
+This takes most of the effort out of installing and configuring everything
+manually.
 
-Everything needed to use and customize these playbooks is all documented here.
-Feel free to explore, adapt, or copy code for your playbook!
-
-Star me on GitHub — thanks! ⭐
+Everything needed to use and customize these playbooks is documented here. Feel
+free to explore, adapt, or copy code for your playbook!
 
 ## ⚠️ Enter, stranger, but take heed ⚠️
 
-If you want to give this a try, you should first fork or clone this repository,
-review, and remove the setting you don’t want or need from the code.
+If you want to give this a try, you should first fork or clone this repository
+to review and remove the settings you don’t need.
 
-**You should not apply this configuration on your own Mac** because it can break
+**You should not apply this configuration on your Mac** because it can break
 or replace your settings. Use it at your own risk!
 
 ## 📖 What's in?
 
-This Ansible role does four tasks. Here are the details:
+These Ansible playbooks do four tasks. Here are the details:
 
 - **App installations:** Command-line tools and applications installed with the
   fantastic [Ansible's Homebrew role] by Jeff Geerling. It installs and
   configures packages, taps, and cask apps according to [supplied variables].
 
-- **zsh installation:** This role configures [zsh] and installs the configuration
-  framework [prezto]. Check out the [zsh role].
+- **zsh installation:** The [zsh role] configures [zsh] and installs the
+  configuration framework [prezto].
 
-- **Dotfile configuration:** This playbook downloads dotfiles from my
-  [dotfile repository] and it symlinking them with [Stow]. You can replace
-  the repository and use your own but make sure you're using [Stow]. This
-  playbook also installs and configures [vscode], you can change the extensions
-  by modifying the [supplied variables]. Check out the [dotfiles role].
+- **Dotfile configuration:** This role downloads the dotfiles from my
+  [dotfile repository] and it symlinks them with [Stow]. It's possible to
+  replace this repository and use your own but make sure you're using [Stow].
+  In addition, this role also configures [vscode]: you can change the
+  installed extensions by modifying the [supplied variables]. Check out the
+  [dotfiles role] for more details.
 
-- **OSX configuration:** This small playbook runs a script to modify the default
-  macOS preferences. Go through the [.macos file] and adjust the settings to your
-  preferences. You can find more settings at the [original script] by Mathias
-  Bynens. Check out the [osx role].
+- **OSX configuration:** The [osx role] runs a script to modify the default
+  macOS preferences. Go through the [.macos file] and adjust the settings to
+  your preferences. You can find more settings at the [original script] by
+  Mathias Bynens.
 
-In summary, you can override most of my settings by modifying the
-[supplied variables] in `group_vars/local/main.yml`.
+In summary, you can override most of my settings by modifying the [supplied variables]
+in `group_vars/local/main.yml`.
 
 ## 📌 Requirements
 
@@ -105,8 +105,15 @@ ansible-playbook main.yml -K
 
 ## 🔍 Running a Specific Playbook
 
-You can filter which part of the provisioning process to run by specifying a playbook.
-These can be `applications.yml`, `dotfiles.yml`, `osx.yml`, and `shell.yml`.
+You can filter which part of the provisioning process to run by specifying a
+playbook:
+
+-  `applications.yml`: installs packages, taps, and cask with Homebrew.
+-  `dotfiles.yml`: configures the applications dotfiles.
+-  `osx.yml`: runs a script to modify the default macOS preferences.
+-  `shell.yml`: configures zsh and installs prezto.
+
+For example:
 
 ```
 ansible-playbook playbooks/osx.yml
@@ -117,20 +124,20 @@ ansible-playbook playbooks/osx.yml
 This playbook takes most of the effort out of installing and configuring
 everything, but there are a few steps that still need to be done manually.
 
-- **Get the environment ready to run Ansible:** This requires installing Homebrew,
-  using Homebrew to install asdf, cloning the repository, and using asdf to
-  install Ansible.
+- **Get the environment ready to run Ansible:** This step requires installing
+  Homebrew, using Homebrew to install asdf, cloning the repository, and using
+  asdf to install Ansible.
 
-- **Configure applications:** It requires configuring personal accounts, but also
-  changing app settings like iTerm.
+- **Configure applications:** This requires configuring personal accounts, but
+  also changing app settings like iTerm.
 
 ## 🕹️ Credits and Inspiration
 
 I first got the idea of starting this project from
-[Sebastián Estrella's devbox repo](https://github.com/sestrella/devbox). You can
-learn a lot by looking at how other people set up their development environment.
-If you want to get started and create your Ansible roles, check out these GitHub
-repositories for more inspiration:
+[Sebastián Estrella's repo](https://github.com/sestrella/devbox). It's clear
+that we can learn a lot by looking at how other people set up their development
+environment. If you want to get started and create your Ansible roles, check
+out these GitHub repositories for more inspiration:
 
 - [Jeff Geerling’s repo](https://github.com/geerlingguy/mac-dev-playbook)
 - [Adam Johnson's repo](https://github.com/adamchainz/mac-ansible)
