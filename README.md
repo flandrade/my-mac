@@ -6,7 +6,9 @@
   align="right"
 />
 
-# My macOS setup with Ansible Playbooks
+# My MacOS Setup with Ansible Playbooks
+
+[![Build Status](https://github.com/flandrade/my-mac/workflows/build/badge.svg)](https://github.com/flandrade/my-mac/actions)
 
 This repository contains a few Ansible playbooks to setup, configure, and maintain
 my Mac. This sets up a full local development environment with a single command.

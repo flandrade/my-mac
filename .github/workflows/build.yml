@@ -1,0 +1,17 @@
+---
+name: build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python and dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - run: pip install -r requirements.txt
+      - name: Run lint
+        run: ansible-lint -v main.yml
