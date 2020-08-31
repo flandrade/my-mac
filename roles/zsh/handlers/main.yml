@@ -1,0 +1,3 @@
+---
+- name: set_zsh
+  command: chsh -s /usr/local/bin/zs

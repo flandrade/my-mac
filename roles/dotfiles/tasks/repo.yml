@@ -19,6 +19,7 @@
     src: "{{ item.stat.path }}"
     dest: "{{ item.stat.path }}.bak"
     remote_src: yes
+    mode: preserve
   when: item.stat.exists
   loop: "{{ dotfile_stat.results }}"
 
