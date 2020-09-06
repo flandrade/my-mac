@@ -11,9 +11,9 @@
 [![Build Status](https://github.com/flandrade/my-mac/workflows/build/badge.svg)](https://github.com/flandrade/my-mac/actions)
 
 This repository contains Ansible playbooks to setup, configure, and maintain
-my Mac. They sets up a full local development environment with a single command.
-This takes most of the effort out of installing and configuring everything
-manually.
+my Mac. They set up a full local development environment with a single command.
+As a result, they take most of the effort out of installing and configuring
+everything manually.
 
 Everything needed to use and customize these playbooks is documented here. Feel
 free to explore, adapt, or copy code for your playbook!
@@ -62,7 +62,6 @@ xcode-select --install
 
 Install [asdf] and [asdf-python] to build and install Python.
 
-
 ## 🚀 Get Started
 
 Clone this repository to your local drive:
@@ -108,10 +107,10 @@ ansible-playbook main.yml -K
 You can filter which part of the provisioning process to run by specifying a
 playbook:
 
--  `applications.yml`: installs packages, taps, and cask with Homebrew.
--  `dotfiles.yml`: configures the applications dotfiles.
--  `osx.yml`: runs a script to modify the default macOS preferences.
--  `shell.yml`: configures zsh and installs prezto.
+- `applications.yml`: installs packages, taps, and cask with Homebrew.
+- `dotfiles.yml`: configures the applications dotfiles.
+- `osx.yml`: runs a script to modify the default macOS preferences.
+- `shell.yml`: configures zsh and installs prezto.
 
 For example:
 
@@ -147,14 +146,13 @@ out these GitHub repositories for more inspiration:
 
 [asdf]: https://asdf-vm.com/#/core-manage-asdf-vm
 [asdf-python]: https://github.com/danhper/asdf-python
-[Ansible's Homebrew role]: https://galaxy.ansible.com/geerlingguy/homebrew
+[ansible's homebrew role]: https://galaxy.ansible.com/geerlingguy/homebrew
 [zsh]: https://github.com/sorin-ionescu/prezto
 [prezto]: https://github.com/sorin-ionescu/prezto
-[Stow]: https://www.gnu.org/software/stow/
+[stow]: https://www.gnu.org/software/stow/
 [dotfile repository]: https://github.com/flandrade/dotfiles
 [original script]: https://github.com/mathiasbynens/dotfiles
 [vscode]: https://code.visualstudio.com/
-
 [supplied variables]: https://github.com/flandrade/my-mac/blob/master/group_vars/local/main.yml
 [.macos file]: https://github.com/flandrade/my-mac/tree/master/roles/osx/files/setup.sh
 [dotfiles role]: https://github.com/flandrade/my-mac/tree/master/roles/dotfiles

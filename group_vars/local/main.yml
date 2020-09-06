@@ -6,6 +6,7 @@ dotfiles_version: HEAD
 dotfiles_vscode: "{{ user_home }}/Library/Application Support/Code/User/settings.json"
 
 homebrew_taps:
+  - heroku/brew
   - homebrew/cask-fonts
   - homebrew/core
 
@@ -20,6 +21,7 @@ homebrew_packages:
   - git
   - gpg
   - grep
+  - heroku
   - htop
   - imagemagick
   - jpegoptim
@@ -31,6 +33,7 @@ homebrew_packages:
   - redis
   - speedtest_cli
   - stow
+  - stripe/stripe-cli/stripe
   - the_silver_searcher
   - tldr
   - tmate
@@ -51,10 +54,12 @@ homebrew_cask_packages:
   - evernote
   - firefox
   - font-fira-code
+  - gimp
   - google-chrome
   - iterm2
   - kindle
   - maccy
+  - ngrok
   - postgres
   - postman
   - slack
