@@ -49,6 +49,7 @@ homebrew_packages:
 homebrew_cask_packages:
   - 1password
   - arq
+  - brave-browser
   - cyberduck
   - docker
   - evernote
@@ -59,6 +60,7 @@ homebrew_cask_packages:
   - iterm2
   - kindle
   - maccy
+  - mullvadvpn
   - ngrok
   - postgres
   - postman
