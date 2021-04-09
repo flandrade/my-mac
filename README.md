@@ -40,9 +40,7 @@ These Ansible playbooks do four tasks. Here are the details:
 - **Dotfile configuration:** This role downloads the dotfiles from my
   [dotfile repository] and it symlinks them with [Stow]. It's possible to
   replace this repository and use your own but make sure you're using [Stow].
-  In addition, this role also configures [vscode]: you can change the
-  installed extensions by modifying the [supplied variables]. Check out the
-  [dotfiles role] for more details.
+  Check out the [dotfiles role] for more details.
 
 - **OSX configuration:** The [osx role] runs a script to modify the default
   macOS preferences. Go through the [.macos file] and adjust the settings to
@@ -152,7 +150,6 @@ out these GitHub repositories for more inspiration:
 [stow]: https://www.gnu.org/software/stow/
 [dotfile repository]: https://github.com/flandrade/dotfiles
 [original script]: https://github.com/mathiasbynens/dotfiles
-[vscode]: https://code.visualstudio.com/
 [supplied variables]: https://github.com/flandrade/my-mac/blob/master/group_vars/local/main.yml
 [.macos file]: https://github.com/flandrade/my-mac/tree/master/roles/osx/files/setup.sh
 [dotfiles role]: https://github.com/flandrade/my-mac/tree/master/roles/dotfiles
