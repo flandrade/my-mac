@@ -1,8 +1,3 @@
 ---
 - name: Configure dotfiles from repo
   import_tasks: repo.yml
-
-# Disable in favor of settings-sync
-# - name: Configure vscode and install extensions
-#   include_tasks: vscode.yml
-#   loop: "{{ vscode_extensions }}"

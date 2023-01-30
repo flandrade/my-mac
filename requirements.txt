@@ -3,14 +3,11 @@ ansible-lint==4.3.3
 cffi==1.14.2
 colorama==0.4.3
 commonmark==0.9.1
-cryptography==3.3.2
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 pycparser==2.20
 Pygments==2.7.4
 PyYAML==5.4
 rich==6.0.0
-ruamel.yaml==0.16.10
-ruamel.yaml.clib==0.2.0
 six==1.15.0
 typing-extensions==3.7.4.3

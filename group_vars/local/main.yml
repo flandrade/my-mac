@@ -3,7 +3,8 @@ user_home: "{{ '~' | expanduser }}"
 dotfiles_repo: https://github.com/flandrade/dotfiles.git
 dotfiles_destination: "{{ user_home }}/dotfiles"
 dotfiles_version: HEAD
-dotfiles_vscode: "{{ user_home }}/Library/Application Support/Code/User/settings.json"
+homebrew_prefix: "/opt/homebrew"
+homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
 
 homebrew_taps:
   - heroku/brew
@@ -21,7 +22,6 @@ homebrew_packages:
   - git
   - gpg
   - grep
-  - heroku
   - htop
   - imagemagick
   - jpegoptim
@@ -29,7 +29,6 @@ homebrew_packages:
   - nmap
   - nvm
   - optipng
-  - postgres
   - redis
   - speedtest_cli
   - stow
@@ -40,19 +39,15 @@ homebrew_packages:
   - tmux
   - trash
   - tree
-  - unrar
   - vim
   - watch
   - wget
   - zsh
 
 homebrew_cask_packages:
-  - 1password
-  - arq
   - brave-browser
   - cyberduck
   - docker
-  - evernote
   - firefox
   - font-fira-code
   - gimp
@@ -60,34 +55,12 @@ homebrew_cask_packages:
   - iterm2
   - kindle
   - maccy
-  - mullvadvpn
   - ngrok
-  - postgres
   - postman
   - slack
   - spotify
   - the-unarchiver
-  - virtualbox
   - visual-studio-code
-  - zoomus
-
-vscode_extensions:
-  - CoenraadS.bracket-pair-colorizer-2
-  - EditorConfig.EditorConfig
-  - GrapeCity.gc-excelviewer
-  - HookyQR.beautify
-  - Zignd.html-css-class-completion
-  - dbaeumer.vscode-eslint
-  - dracula-theme.theme-dracula
-  - eamodio.gitlens
-  - esbenp.prettier-vscode
-  - mikestead.dotenv
-  - mkaufman.HTMLHint
-  - oderwat.indent-rainbow
-  - pranaygp.vscode-css-peek
-  - redhat.vscode-yaml
-  - streetsidesoftware.code-spell-checker
-  - vscode-icons-team.vscode-icons
-  - vscodevim.vim
-  - wix.vscode-import-cost
-  - yzhang.markdown-all-in-one
+  - zoom
+  - whatsapp
+  - postgres-unofficial
