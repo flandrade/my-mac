@@ -29,6 +29,7 @@ homebrew_packages:
   - nmap
   - nvm
   - optipng
+  - postgresql
   - redis
   - speedtest_cli
   - stow
@@ -56,6 +57,7 @@ homebrew_cask_packages:
   - kindle
   - maccy
   - ngrok
+  - notion
   - postman
   - slack
   - spotify
