@@ -25,6 +25,7 @@ homebrew_packages:
   - htop
   - imagemagick
   - jpegoptim
+  - mailpit
   - ncdu
   - nmap
   - nvm
@@ -48,6 +49,7 @@ homebrew_packages:
 homebrew_cask_packages:
   - brave-browser
   - cyberduck
+  - discord
   - docker
   - firefox
   - font-fira-code
