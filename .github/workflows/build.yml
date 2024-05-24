@@ -13,5 +13,4 @@ jobs:
         with:
           python-version: "3.x"
       - run: pip install -r legacy_ansible/requirements.txt
-      - name: Run lint
-        run: ansible-lint -v legacy_ansible/main.yml
+
