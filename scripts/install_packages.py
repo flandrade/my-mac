@@ -26,6 +26,7 @@ homebrew_packages = [
     "nmap",
     "nvm",
     "optipng",
+    "pipx",
     "postgresql",
     "redis",
     "speedtest_cli",
@@ -112,4 +113,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
