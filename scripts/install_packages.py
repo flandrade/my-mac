@@ -53,6 +53,7 @@ homebrew_cask_packages = [
     "font-fira-code",
     "gimp",
     "google-chrome",
+    "inkscape",
     "iterm2",
     "kindle",
     "maccy",
