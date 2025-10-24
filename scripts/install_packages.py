@@ -10,6 +10,7 @@ homebrew_taps = [
 homebrew_packages = [
     "asdf",
     "bat",
+    'bruno'
     "catimg",
     "coreutils",
     "curl",
@@ -45,12 +46,13 @@ homebrew_packages = [
 ]
 
 homebrew_cask_packages = [
-    "brave-browser",
+    "cursor",
     "cyberduck",
     "discord",
     "docker",
     "firefox",
     "font-fira-code",
+    "ghostty",
     "gimp",
     "google-chrome",
     "inkscape",

@@ -37,13 +37,14 @@ Run the scripts:
 ```
 python install_packages.py
 python dotfiles.py
+python shell.py
 setup.sh
 ```
 
-To configure the termina
+To configure the terminal:
 
 ```
-zsh 
+zsh
 python shell.py
 ```
 
