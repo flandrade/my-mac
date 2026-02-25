@@ -64,11 +64,32 @@ def install_ghostty_config():
     else:
         print(f"Warning: Ghostty config file not found at {ghostty_config_src}")
 
+def install_broot_config():
+    print("Installing Broot config...")
+    broot_config_src = os.path.join(DOTFILES_DIR, "broot", "conf.hjson")
+    broot_config_dst = os.path.expanduser("~/.config/broot/conf.hjson")
+
+    # Create the destination directory if it doesn't exist
+    broot_user_dir = os.path.dirname(broot_config_dst)
+    os.makedirs(broot_user_dir, exist_ok=True)
+
+    if os.path.exists(broot_config_src):
+        # Remove existing file/symlink if it exists
+        if os.path.exists(broot_config_dst) or os.path.islink(broot_config_dst):
+            os.remove(broot_config_dst)
+
+        # Create the symlink
+        os.symlink(broot_config_src, broot_config_dst)
+        print("Broot config symlink created successfully!")
+    else:
+        print(f"Warning: Broot config file not found at {broot_config_src}")
+
 def main():
     fetch_dotfiles()
     install_dotfiles()
     install_cursor_settings()
     install_ghostty_config()
+    install_broot_config()
     print("Dotfiles installation completed!")
 
 if __name__ == "__main__":
