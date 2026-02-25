@@ -10,6 +10,7 @@ homebrew_taps = [
 homebrew_packages = [
     "asdf",
     "bat",
+    "broot",
     'bruno'
     "catimg",
     "coreutils",
@@ -25,6 +26,7 @@ homebrew_packages = [
     "mailpit",
     "ncdu",
     "nmap",
+    "ngrok",
     "nvm",
     "optipng",
     "pipx",
@@ -42,7 +44,8 @@ homebrew_packages = [
     "vim",
     "watch",
     "wget",
-    "zsh"
+    "zsh",
+
 ]
 
 homebrew_cask_packages = [
