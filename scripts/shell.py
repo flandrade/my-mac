@@ -7,6 +7,16 @@ def clone_repository():
     print("Cloning Prezto repository...")
     subprocess.run(["git", "clone", "--recursive", "https://github.com/sorin-ionescu/prezto.git", f"{ZDOTDIR}/.zprezto"])
 
+def install_fzf_tab():
+    print("Installing fzf-tab plugin...")
+    zpreztodir = f"{ZDOTDIR}/.zprezto"
+    fzf_tab_path = f"{zpreztodir}/contrib/fzf-tab"
+
+    if not os.path.exists(fzf_tab_path):
+        subprocess.run(["git", "clone", "https://github.com/Aloxaf/fzf-tab", fzf_tab_path])
+    else:
+        print("fzf-tab already installed. Skipping.")
+
 def create_zsh_configuration():
     print("Creating Zsh configuration...")
     if not os.path.exists(f"{ZDOTDIR}/.zprezto/runcoms"):
@@ -31,6 +41,7 @@ def set_default_shell():
 
 def main():
     clone_repository()
+    install_fzf_tab()
     create_zsh_configuration()
     set_default_shell()
     print("Prezto installation completed!")
