@@ -23,6 +23,7 @@ homebrew_packages = [
     "fzf",
     "gh",
     "git",
+    "glow",
     "gpg",
     "htop",
     "imagemagick",
